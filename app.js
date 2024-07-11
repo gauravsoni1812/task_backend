@@ -35,6 +35,6 @@ app.get("/",(req, res)=>{
 
 app.listen(process.env.PORT, () => {
   console.log(`Server Listening on port: ${process.env.PORT}`);
-});
+}); 
 
 export default app;
