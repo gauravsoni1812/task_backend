@@ -3,13 +3,14 @@ import ErrorHandler from "../middlewares/error.js";
 import { Task } from "../models/taskSchema.js";
 
 export const createTask = catchAsyncErrors(async (req, res, next) => {
-  const { title, description, date } = req.body;
+  const { title, description, date , color } = req.body;
   const createdBy = req.user._id;
   const task = await Task.create({
     title,
     description,
     createdBy,
-    due_date:date
+    due_date:date,
+    color
   });
   res.status(200).json({
     success: true,

@@ -13,6 +13,11 @@ const taskSchema = new mongoose.Schema({
     enum: ["completed", "incomplete"],
     default: "incomplete",
   },
+  color: {
+    type: String,
+    enum: ["red", "blue","green"],
+    default: "green",
+  },
   archived: {
     type: Boolean,
     default: false,
